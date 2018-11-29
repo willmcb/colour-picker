@@ -40,6 +40,10 @@ ColourPicker.prototype.toString = function() {
    return "rgb(" + this.getRed() + ", " + this.getBlue() + ", " + this.getGreen() + ", " + this.getOpacity() + ")";
 }
 
+ColourPicker.prototype.oppositeToString = function() {
+   return "rgb(" + (255 - this.getRed()) + ", " + (255 - this.getBlue()) + ", " + (255 - this.getGreen()) + ", " +(1 - this.getOpacity()) + ")";
+}
+
 if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') )
 {
     module.exports = ColourPicker;

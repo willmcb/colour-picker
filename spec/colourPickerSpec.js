@@ -8,7 +8,6 @@ describe("ColourPicker", function() {
     colourPicker = new ColourPicker();
   });
 
-
   it("It's initial state is white", function() {
     expect(colourPicker.getRed()).toBe(twoFiveFive);
     expect(colourPicker.getBlue()).toBe(twoFiveFive);
@@ -35,8 +34,6 @@ describe("ColourPicker", function() {
     expect(colourPicker.getGreen()).toBe(150);
     expect(colourPicker.getOpacity()).toBe(0.3);
   });
-
-
 
   it("can has an overridden toString() that returns the right form", function() {
     var toStringExample = "rgb(150, 160, 220, 1)"
