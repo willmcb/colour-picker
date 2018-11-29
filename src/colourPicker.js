@@ -18,14 +18,17 @@ ColourPicker.prototype.getGreen = function(){
    return this.green;
 }
 
-ColourPicker.prototype.colourUp = function(colour, num) {
-   this.canIncrease(colour, num) ? this[colour] += num : false;
+ColourPicker.prototype.setRed = function(num){
+   this.red = num;
 }
 
-ColourPicker.prototype.colourDown = function(colour, num) {
-   this.canDecrease(colour, num) ? this[colour] -= num : false;
+ColourPicker.prototype.setBlue = function(num){
+   this.blue = num;
 }
 
+ColourPicker.prototype.setGreen = function(num){
+   this.green = num;
+}
 ColourPicker.prototype.canIncrease = function(colour, num) {
     return (this[colour] + num <= this.COLOUR_MAX);
 }

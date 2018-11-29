@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./src/colourPicker.js"></script>
+    <script src="./src/page.js"></script>
+  </head>
+  <body>
+    <label for="red" value="Red">Red</label>
+    <input id="red-slider" type="range" name="red" min="0" max="255" step="1">
+    <br>
+    <label for="blue" value="Blue">Blue</label>
+    <input id="blue-slider" type="range" name="blue" min="0" max="255" step="1">
+    <br>
+    <label for="green" value="Green">Green</label>
+    <input id="green-slider" type="range" name="green" min="0" max="255" step="1">
+
+    <div id="colour-view" style="width: 200px; height: 200px; boder-color: black;">
+    </div>
+  </body>
+</html>
