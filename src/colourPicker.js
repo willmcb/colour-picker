@@ -2,8 +2,7 @@ function ColourPicker(){
    this.red = 255;
    this.blue = 255;
    this.green = 255;
-   this.COLOUR_MAX = 255;
-   this.COLOUR_MIN = 0;
+   this.opacity = 1;
 }
 
 ColourPicker.prototype.getRed = function(){
@@ -18,6 +17,9 @@ ColourPicker.prototype.getGreen = function(){
    return this.green;
 }
 
+ColourPicker.prototype.getOpacity = function(){
+   return this.opacity;
+}
 ColourPicker.prototype.setRed = function(num){
    this.red = num;
 }
@@ -29,12 +31,13 @@ ColourPicker.prototype.setBlue = function(num){
 ColourPicker.prototype.setGreen = function(num){
    this.green = num;
 }
-ColourPicker.prototype.canIncrease = function(colour, num) {
-    return (this[colour] + num <= this.COLOUR_MAX);
+
+ColourPicker.prototype.setOpacity = function(num){
+   this.opacity = num;
 }
 
-ColourPicker.prototype.canDecrease = function(colour, num) {
-    return (this[colour] - num >= this.COLOUR_MIN);
+ColourPicker.prototype.toString = function() {
+   return "rgb(" + this.getRed() + ", " + this.getBlue() + ", " + this.getGreen() + ", " + this.getOpacity() + ")";
 }
 
 if ( typeof module !== 'undefined' && module.hasOwnProperty('exports') )
